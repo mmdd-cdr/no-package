@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="../../utils/font/iconfont.js"></script>
+    <script src="../../utils/lazysizes.min.js" async=""></script>
+    <title>React App</title>
+  </head>
+  <style>
+    @import url(./index.css);
+    @import url(../../utils/header/index.css);
+    @import url(../../utils/footer/index.css);
+  </style>
+  <body>
+    <div class="home">
+      <!-- header -->
+      <header></header>
+      <!-- header -->
+      <!-- 新闻数据 -->
+      <div class="news" >
+        <div class="news-title" >最新动态 <span class="news-title-important" >NEW！</span></div>
+        <div class="news-contant" >
+            <!-- {renderData()} -->
+        </div>
+        <div class="pagination-box" >
+          <div class="pagination" ></div>
+            <!-- <Pagination
+                onChange={(data) => {
+                    setParams({ page: data, page_size: 8 })
+                }}
+                current={params.page}
+                pageSize={params.page_size}
+                total={meta.total}
+            /> -->
+        </div>
+    </div>
+      <!-- 新闻数据 -->
+      <!-- footer -->
+      <footer></footer>
+      <!-- footer -->
+    <div></div>
+  </body>
+  <script type="module" src="./index.js"></script>
+  <script src="../../utils/header/index.js"></script>
+  <script src="../../utils/footer/index.js"></script>
+</html>

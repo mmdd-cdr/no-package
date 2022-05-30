@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="../../utils/font/iconfont.js"></script>
+    <script src="../../utils/lazysizes.min.js" async=""></script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=iSUw2dNuF2YTEmYbICHD2UiURmUmoCo7"></script>
+    <title>React App</title>
+  </head>
+  <style>
+    @import url(./index.css);
+    @import url(../../utils/header/index.css);
+    @import url(../../utils/footer/index.css);
+  </style>
+  <body>
+    <div class="home">
+      <!-- header -->
+      <header></header>
+      <!-- header -->
+      <!-- 关于 -->
+      <div class="about" >
+        <div class="about-title" >关于我们</div>
+        <div class="about-us" >
+            <div class="about-us-map" >
+              <div id="allmap"></div>
+            </div>
+            <div class="about-us-text" >
+                <div class="about-us-text-tips" >《宝可梦》（曾译名《精灵宝可梦》）另有常见非官方译名：《口袋妖怪》（中国大陆曾译名）、《宠物小精灵》（中国香港曾译名）、《神奇宝贝》（中国台湾曾译名）。是由Game Freak和Creatures株式会社开发，任天堂发行的系列游戏，是宝可梦媒体作品的主要部分。最初的作品是在1996年于日本发行的Game Boy角色扮演游戏。宝可梦系列一直贯穿任天堂的各代掌机之中。系列中的游戏通常成对发售（有所区别），复刻版常在初版游戏发布的几年后出现。游戏的主系列由角色扮演类游戏组成，旁支系列的游戏则包含有其他的类型，例如动作角色扮演游戏、益智游戏和电子宠物等。2月27日为“宝可梦日”。</div>
+            </div>
+        </div>
+    </div>
+      <!-- 关于 -->
+      <!-- footer -->
+      <footer></footer>
+      <!-- footer -->
+    <div></div>
+  </body>
+  <script type="module" src="./index.js"></script>
+  <script src="../../utils/header/index.js"></script>
+  <script src="../../utils/footer/index.js"></script>
+  <script type="text/javascript">
+    // GL版命名空间为BMapGL
+    // 按住鼠标右键，修改倾斜角和角度
+	let map = new BMapGL.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMapGL.Point(119.247755, 26.058963), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+  let marker = new BMapGL.Marker(new BMapGL.Point(119.247755, 26.058963));
+  map.addOverlay(marker);
+</script>
+</html>

@@ -1,0 +1,297 @@
+html {
+  overflow-y: scroll;
+}
+a{
+  text-decoration:none;
+}
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  width: 100vw;
+}
+
+.home-carousel {
+  height: 60vw;
+  width: 500vw;
+  position: relative;
+  display: flex;
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 60vw;
+  width: 100vw;
+  filter: url(#carousel-img);
+}
+
+.carousel-box {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.home-carousel-step {
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.step-item {
+  width: 5vw;
+  height: 1vw;
+  margin-right: 1vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 0.5vw;
+}
+
+.step-item-fist {
+  background-color: white;
+}
+
+.step {
+  padding: 0 10px;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.step-two-title {
+  font-size: 3.5vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+
+.step-two-box {
+  padding: 4vw;
+  background-color: #f3f4f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.step-two-box-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.step-two-box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-two-box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-icon {
+  height: 5vw;
+  width: 5vw;
+  min-height: 30px;
+  min-width: 30px;
+  margin-bottom: 10px;
+}
+
+/* 宝可梦介绍 */
+
+.team-reverse {
+  flex-direction: row-reverse;
+}
+
+.team {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+.team-item {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-people {
+  width: 100%;
+  height: 54vw;
+  object-fit: cover
+}
+
+.team-text {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.team-text-name {
+  font-weight: bold;
+  font-size: 2.8vw;
+  text-align: center;
+}
+
+.team-text-text {
+  margin-top: 2vw;
+  font-size: 2vw;
+  color: #8a8b8b;
+}
+
+.power-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team-text-power {
+  font-size: 1vw;
+  font-weight: bold;
+  color: #8a8b8b;
+}
+
+.line {
+  border-top: 1px #8a8b8b solid;
+  width: 80px;
+  margin-bottom: 2vw;
+}
+
+.news-box {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  cursor: pointer;
+  display: flex;
+  color: #8a8b8b;
+  flex-direction: column;
+  width: 15vw;
+}
+
+
+.news-item:hover {
+  color: #448ef7;
+}
+
+.news-item-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.news-item-title {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.2;
+  height: 34px;
+  width: 100%;
+  
+}
+
+.news-item-keyword {
+  border-top: 1px solid #ccc;
+  margin-top: 8px;
+  padding-top: 4px;
+  color: #8a8b8b;
+  font-size: 12px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+}
+
+@media screen and (max-width: 650px) {
+  .team {
+    flex-direction: column;
+  }
+
+
+  .team-people {
+    height: 84vw;
+  }
+
+  .team-text-name {
+    margin-top: 20px;
+  }
+
+  .power-box {
+    margin-top: 20px;
+  }
+
+  .team-reverse {
+    flex-direction: column;
+  }
+  /* 新闻 */
+  .news-box {    
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .news-item {
+    width: 240px;
+    margin-bottom: 16px;
+  }
+  .news-item:hover {
+    color: #448ef7;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .step-two-box-group {
+    flex-direction: column;
+  }
+
+  .group-bottom {
+    margin-top: 3vw;
+  }
+}
